@@ -18,10 +18,12 @@ const Login = () => {
                 password: password
             });
             console.log(response);
-            if (response.status === 200 && response.data === "success")
+            if (response.status === 200)
                 navigate("/dashboard");
+            else if (response.status === 401)
+                setError("Invalid credentials");
             else
-                response.data ? setError(response.data) : setError("Invalid credentials");
+                setError("Login Failed");
         } catch (error) {
             setError("Login Failed");
         }
