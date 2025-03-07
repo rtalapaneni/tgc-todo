@@ -9,19 +9,23 @@ import Registration from "./components/Registration";
 import Dashboard from "./components/Dashboard";
 import { ThemeProvider } from "@emotion/react";
 import { Theme } from "./components/Theme";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <Provider store={store}>
     <ThemeProvider theme={Theme}>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Registration />} />
-        <Route path="dashboard" element={<Dashboard />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Registration />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
-  </BrowserRouter>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

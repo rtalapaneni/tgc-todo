@@ -22,9 +22,9 @@ public class LoginController {
         Optional<UserDTO> userDTO = registrationService.login(loginDTO);
 
         if(userDTO.isPresent()) {
-            ResponseEntity.ok("successful");
+            return ResponseEntity.ok("successful");
         } else {
-            ResponseEntity.status(401).body("Login failed");
+            return ResponseEntity.status(401).body("Login failed");
         }
     }
 }
