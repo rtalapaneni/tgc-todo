@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.completed {
+  background-color: #d4edda !important; /* Light green */
+}
+
+.due {
+  background-color: #fff3cd !important; /* Light yellow */
+}
+
+.past-due {
+  background-color: #f8d7da !important; /* Light red */
+}

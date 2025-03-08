@@ -15,6 +15,7 @@ import java.time.LocalDate;
 public class TodoDTO {
     private String id;
     private String title;
+    private String description;
     @JsonFormat(pattern = "MM-dd-yyyy")
     private LocalDate dueDate;
     private boolean completed;

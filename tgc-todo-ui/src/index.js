@@ -7,15 +7,16 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Login from "./components/Login";
 import Registration from "./components/Registration";
 import Dashboard from "./components/Dashboard";
-import { ThemeProvider } from "@emotion/react";
-import { Theme } from "./components/Theme";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Provider } from "react-redux";
 import store from "./store";
+
+const theme = createTheme();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
