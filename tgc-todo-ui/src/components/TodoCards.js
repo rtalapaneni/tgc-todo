@@ -13,13 +13,13 @@ const TodoCards = ({ todos }) => {
   return (
     <Grid2 container spacing={1}>
       <Grid2 size={{ xs: 12, sm: 4 }}>
-        <TodoCard count={completedCount} cardType="Completed" />
-      </Grid2>
-      <Grid2 size={{ xs: 12, sm: 4 }}>
         <TodoCard count={pastDueCount} cardType="Past Due" />
       </Grid2>
       <Grid2 size={{ xs: 12, sm: 4 }}>
         <TodoCard count={dueCount} cardType="Due" />
+      </Grid2>
+      <Grid2 size={{ xs: 12, sm: 4 }}>
+        <TodoCard count={completedCount} cardType="Completed" />
       </Grid2>
     </Grid2>
   );

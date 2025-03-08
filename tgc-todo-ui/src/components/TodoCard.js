@@ -1,21 +1,22 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
 const TodoCard = ({ count, cardType }) => {
-  const getCardStyle = () => {
+  
+  const getCardStyleClass = () => {
     switch (cardType) {
       case "Completed":
-        return { backgroundColor: "lightgreen" };
+        return "completed";
       case "Past Due":
-        return { backgroundColor: "lightcoral" };
+        return "past-due";
       case "Due":
-        return { backgroundColor: "lightyellow" };
+        return "due";
       default:
-        return {};
+        return "";
     }
   };
 
   return (
-    <Card style={getCardStyle()}>
+    <Card className={getCardStyleClass()}>
       <CardContent align="center">
         <Typography variant="h5">{cardType}</Typography>
         <Typography variant="subtitle1">{count} Todos</Typography>

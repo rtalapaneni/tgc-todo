@@ -38,13 +38,13 @@
 }
 
 .completed {
-  background-color: #d4edda !important; /* Light green */
+  background-color: lightgreen !important; /* Light green */
 }
 
 .due {
-  background-color: #fff3cd !important; /* Light yellow */
+  background-color: lightyellow !important; /* Light yellow */
 }
 
 .past-due {
-  background-color: #f8d7da !important; /* Light red */
+  background-color: lightcoral !important; /* Light red */
 }
