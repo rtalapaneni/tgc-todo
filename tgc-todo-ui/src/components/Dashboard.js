@@ -16,7 +16,7 @@ const Dashboard = () => {
   return (
     <div>
       <TodoCards todos={todos} />
-      <TodoDataGrid todos={todos} />
+      <TodoDataGrid />
     </div>
   );
 }

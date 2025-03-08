@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -47,7 +48,7 @@ public class TodoService {
 
     private List<TodoDTO> buildSampleData() {
 
-        return List.of(
+        return new ArrayList<>(List.of(
                 TodoDTO.builder()
                         .id("1")
                         .title("First Todo")
@@ -75,6 +76,6 @@ public class TodoService {
                         .description("This is the fourth todo")
                         .dueDate(LocalDate.now().plusDays(5))
                         .completed(false)
-                        .build());
+                        .build()));
     }
 }

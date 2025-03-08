@@ -16,7 +16,7 @@ public class TodoDTO {
     private String id;
     private String title;
     private String description;
-    @JsonFormat(pattern = "MM-dd-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dueDate;
     private boolean completed;
 }
