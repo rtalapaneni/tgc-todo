@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchTodos } from "./todoSlice";
-import TodoCards from "./TodoCards";
+import TodoCards from "./summary/TodoCards";
 import TodoDataGrid from "./datagrid//TodoDataGrid";
 
 

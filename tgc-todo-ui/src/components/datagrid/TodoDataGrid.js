@@ -97,6 +97,7 @@ const TodoDataGrid = () => {
             paginationModel: { pageSize: 5, page: 0 },
           },
         }}
+        pageSizeOptions={[5, 10, 20]}
         getRowClassName={(params) => {
           if (params.row.completed) return "completed";
           if (new Date(params.row.dueDate) < new Date()) return "past-due";
